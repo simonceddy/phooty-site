@@ -2,8 +2,6 @@ import React from 'react';
 import style from 'styled-components';
 import theme from 'styled-theming';
 import { themes } from '../shared/themes';
-import primaryColorMap from '../shared/themes/primaryColorMap';
-import secondaryColorMap from '../shared/themes/secondaryColorMap';
 
 function Settings({
   currentTheme,
@@ -12,8 +10,10 @@ function Settings({
 }) {
   let lastId = 0;
 
-  const primary = theme('mode', primaryColorMap);
-  const secondary = theme('mode', secondaryColorMap);
+  const themeHandler = themes();
+
+  const primary = theme('mode', themeHandler.maps.primary);
+  const secondary = theme('mode', themeHandler.maps.secondary);
 
   const SettingsBox = style.div`
   background-color: ${secondary};
@@ -48,7 +48,7 @@ function Settings({
             }}
             defaultValue={currentTheme}
           >
-            {themes.map(({ mode, name }) => {
+            {themeHandler.presets.map(({ mode, name }) => {
               lastId++;
               return (
                 <option value={mode} key={lastId}>

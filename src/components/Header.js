@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from 'styled-theming';
-import primaryTitleColorMap from '../shared/themes/primaryTitleColorMap';
 
 import Menu from './Menu';
 
-function Header({ children }) {
-  const titleColor = theme('mode', primaryTitleColorMap);
+function Header({ children, themes }) {
+  const titleColor = theme('mode', themes.maps.primaryTitle);
 
   const Title = styled.h1`
     color: ${titleColor};

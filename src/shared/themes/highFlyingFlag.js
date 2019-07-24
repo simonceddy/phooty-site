@@ -1,8 +1,8 @@
 import { FREO_PURPLE } from './colours';
 
-const heaveHo = {
-  mode: 'heaveHo',
-  name: 'Heave Ho modern',
+const highFlyingFlag = {
+  mode: 'highFlyingFlag',
+  name: 'High Flying Flag',
   map: {
     primary: 'white',
     secondary: FREO_PURPLE,
@@ -10,4 +10,4 @@ const heaveHo = {
   },
 };
 
-export default heaveHo;
+export default highFlyingFlag;

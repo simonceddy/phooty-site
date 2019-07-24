@@ -9,12 +9,13 @@ import Header from './Header';
 import Home from './Home';
 import Modules from './Modules';
 import Settings from './Settings';
-import primaryColorMap from '../shared/themes/primaryColorMap';
-import secondaryColorMap from '../shared/themes/secondaryColorMap';
+import { themes } from '../shared/themes';
 
-const primary = theme('mode', primaryColorMap);
+const themeHandler = themes();
 
-const secondary = theme('mode', secondaryColorMap);
+const primary = theme('mode', themeHandler.maps.primary);
+
+const secondary = theme('mode', themeHandler.maps.secondary);
 
 const Wrapper = styled.div`
   background-color: ${secondary};
@@ -22,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 function App() {
-  const [themeMode, setThemeMode] = useState('light');
+  const [themeMode, setThemeMode] = useState('admirationOfTheNation');
   const [settingsToggled, setSettingsToggled] = useState(false);
 
   const toggleSettings = () => setSettingsToggled(!settingsToggled);
@@ -42,6 +43,7 @@ function App() {
               showCloseIcon={false}
             >
               <Settings
+                themes={themeHandler}
                 setTheme={setThemeMode}
                 currentTheme={themeMode}
                 toggleSettings={toggleSettings}
@@ -50,7 +52,7 @@ function App() {
           )
           : null
         }
-        <Header>
+        <Header themes={themeHandler}>
           <div>
             <SettingsIcon
               className="cursor-pointer"
