@@ -14,6 +14,10 @@ export const DEES_RED = '';
 
 export const DONS_RED = '';
 
+export const LIONS_PURPLE = '#69003d';
+
+export const LIONS_GOLD = '#edc157';
+
 export const TIGES_YELLOW = '';
 
 export const CROWS_YELLOW = '#ffd200';
