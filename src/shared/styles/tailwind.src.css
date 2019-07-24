@@ -1,0 +1,17 @@
+@tailwind base;
+
+/* put components here */
+.menu-link {
+  @apply no-underline p-1;
+}
+
+.menu-link:hover, .menu-link.active {
+  @apply underline;
+}
+
+.menu-link:hover {
+  @apply bg-black text-white;
+}
+
+@tailwind components;
+@tailwind utilities;
