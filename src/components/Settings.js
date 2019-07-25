@@ -3,19 +3,12 @@ import style from 'styled-components';
 import theme from 'styled-theming';
 import { themes } from '../shared/themes';
 
-function Settings({
-  currentTheme,
-  setTheme,
-  toggleSettings
-}) {
-  let lastId = 0;
+const themeHandler = themes();
 
-  const themeHandler = themes();
+const primary = theme('mode', themeHandler.maps.primary);
+const secondary = theme('mode', themeHandler.maps.secondary);
 
-  const primary = theme('mode', themeHandler.maps.primary);
-  const secondary = theme('mode', themeHandler.maps.secondary);
-
-  const SettingsBox = style.div`
+const SettingsBox = style.div`
   background-color: ${secondary};
   color: ${primary};
   border: solid thin ${primary};
@@ -23,17 +16,24 @@ function Settings({
   min-width: 280px;
 `;
 
-  const SelectWrapper = style.select`
+const SelectWrapper = style.select`
   background-color: ${secondary};
   color: ${primary};
   border: solid thin ${primary};
 `;
 
-  const FinishedButton = style.button`
+const FinishedButton = style.button`
   background-color: ${secondary};
   color: ${primary};
   border: solid thin ${primary};
 `;
+
+function Settings({
+  currentTheme,
+  setTheme,
+  toggleSettings
+}) {
+  let lastId = 0;
 
   return (
     <SettingsBox className="flex flex-col flex-1 p-2">
