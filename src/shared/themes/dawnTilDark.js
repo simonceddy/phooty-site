@@ -1,8 +1,8 @@
 import { CATS_BLUE } from './colours';
 
-const atHomeOrFarAway = {
-  mode: 'atHomeOrFarAway',
-  name: 'At Home or Far Away',
+const dawnTilDark = {
+  mode: 'dawnTilDark',
+  name: 'From Dawn Til Dark',
   map: {
     primary: 'white',
     secondary: CATS_BLUE,
@@ -10,4 +10,4 @@ const atHomeOrFarAway = {
   }
 };
 
-export default atHomeOrFarAway;
+export default dawnTilDark;

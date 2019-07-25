@@ -20,9 +20,9 @@ export const FREO_GREEN = 'rgb(20, 122, 59)';
 
 export const NAVY_BLUE = '#031e2f';
 
-export const DEES_BLUE = '';
+export const DEES_BLUE = '#061a33';
 
-export const DEES_RED = '';
+export const DEES_RED = '#de0316';
 
 export const DONS_RED = '#aa1d30';
 

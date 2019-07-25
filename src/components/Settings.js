@@ -37,10 +37,10 @@ function Settings({
 
   return (
     <SettingsBox className="flex flex-col flex-1 p-2">
-      <h2 className="text-3xl">SETTINGS</h2>
+      <h2 className="text-3xl mb-2">SETTINGS</h2>
       <div className="w-full flex flex-col flex-1">
         <div id="theme-selector" className="flex flex-row justify-between">
-          <span>Select colour theme:</span>
+          <span className="mr-2">Colour theme:</span>
           <SelectWrapper
             onChange={(e) => {
               e.preventDefault();

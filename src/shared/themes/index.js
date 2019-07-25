@@ -1,8 +1,10 @@
 import heaveHo from './heaveHo';
 import heaveHoClassic from './heaveHoClassic';
-import atHomeOrFarAway from './atHomeOrFarAway';
+import dawnTilDark from './dawnTilDark';
 import nobleBanner from './nobleBanner';
 import admirationOfTheNation from './admirationOfTheNation';
+import ifYourHeartBeatsTrue from './ifYourHeartBeatsTrue';
+import ridingTheBumps from './ridingTheBumps';
 
 const maps = {
   primary: {},
@@ -12,11 +14,13 @@ const maps = {
 
 export const themes = () => {
   const presets = [
+    admirationOfTheNation,
     heaveHo,
     heaveHoClassic,
-    atHomeOrFarAway,
+    dawnTilDark,
+    ridingTheBumps,
+    ifYourHeartBeatsTrue,
     nobleBanner,
-    admirationOfTheNation
   ];
 
   presets.map(({ mode, map }) => {
